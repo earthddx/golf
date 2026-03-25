@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && cd dist && git init && git add -A && git commit -m deploy && git push -f https://github.com/earthddx/golf.git HEAD:gh-pages"
   },
   "dependencies": {
     "lucide-react": "^1.6.0",
