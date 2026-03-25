@@ -184,7 +184,7 @@ export default function App() {
             </div>
 
             <div className={styles.aboutText}>
-              <img src="/thumbnail.jpeg" alt="Alessandra Miller" className={styles.avatar} />
+              <img src={`${import.meta.env.BASE_URL}thumbnail.jpeg`} alt="Alessandra Miller" className={styles.avatar} />
               <p className={styles.sectionEyebrow}>About Alessandra</p>
               <h2 className={styles.sectionTitle}>Where Biomechanics<br />Meets the Fairway</h2>
               <p className={styles.aboutParagraph}>
@@ -300,7 +300,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className={styles.affiliateItem}
               >
-                <img src="/lactigo.avif" alt="LactiGo" className={styles.affiliateLogo} />
+                <img src={`${import.meta.env.BASE_URL}lactigo.avif`} alt="LactiGo" className={styles.affiliateLogo} />
               </a>
             </div>
             <div className={styles.affiliateDivider} />
@@ -311,7 +311,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className={styles.affiliateItem}
               >
-                <img src="/mystagolf.webp" alt="Mysta Golf" className={`${styles.affiliateLogo} ${styles.affiliateLogoLg}`} />
+                <img src={`${import.meta.env.BASE_URL}mystagolf.webp`} alt="Mysta Golf" className={`${styles.affiliateLogo} ${styles.affiliateLogoLg}`} />
               </a>
             </div>
           </div>
