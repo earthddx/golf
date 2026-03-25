@@ -171,15 +171,37 @@ export default function App() {
       <section id="about" className={styles.about}>
         <div className={styles.container}>
           <div className={styles.aboutGrid}>
-            <div className={styles.aboutImageWrap}>
-              <img
-                src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=800&q=80"
-                alt="Golf swing analysis"
-                className={styles.aboutImg}
-              />
-              <div className={styles.aboutBadge}>
-                <span>TPI</span>
-                <span>Certified</span>
+            <div className={styles.aboutCertsCol}>
+              <p className={styles.certSectionLabel}>Certifications &amp; Training</p>
+              <ul className={styles.certCardList}>
+                {[
+                  { title: 'MyTPI Golf Fitness', sub: 'Titleist Performance Institute' },
+                  { title: 'K-Vest 3D Biomechanics', sub: 'Kinematic Sequence Analysis' },
+                  { title: 'ELDOA Practitioner', sub: 'Spinal Decompression Method' },
+                  { title: 'NASM-CES', sub: 'Corrective Exercise Specialist' },
+                  { title: 'Medical Golf Fitness', sub: 'Rehabilitation-Informed Training' },
+                  { title: "Dr. Kwon's Golf Biomechanics", sub: 'Instructor Training Program' },
+                ].map(c => (
+                  <li key={c.title} className={styles.certCard}>
+                    <span className={styles.certCardDot} />
+                    <div>
+                      <span className={styles.certCardTitle}>{c.title}</span>
+                      <span className={styles.certCardSub}>{c.sub}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <div className={styles.eduSection}>
+                <p className={styles.certSectionLabel}>Education</p>
+                <div className={styles.eduCard}>
+                  <span className={styles.certCardDot} />
+                  <div>
+                    <span className={styles.certCardTitle}>Uniararas University</span>
+                    <span className={styles.certCardSub}>Bachelor's Degree · Health &amp; Physical Education / Exercise Physiology</span>
+                    <span className={styles.eduYear}>2000 – 2004</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -198,15 +220,6 @@ export default function App() {
                 as a whole athlete and build individualized programs that produce lasting results
                 on the course.
               </p>
-              <ul className={styles.certList}>
-                {['MyTPI Golf Fitness Certified', 'K-Vest 3D Biomechanics', 'ELDOA Practitioner',
-                  'NASM-CES', 'Medical Golf Fitness'].map(c => (
-                  <li key={c} className={styles.certItem}>
-                    <span className={styles.certDot} />
-                    {c}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
@@ -292,28 +305,29 @@ export default function App() {
       <section className={styles.affiliate}>
         <div className={styles.container}>
           <p className={styles.affiliateLabel}>Official Affiliates</p>
+          <p className={styles.affiliateSub}>Brands Alessandra personally uses and recommends — affiliate links, she may earn a commission on purchases.</p>
           <div className={styles.affiliateGrid}>
-            <div className={styles.affiliateItem}>
-              <a
-                href="https://my.lactigo.com/alle"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.affiliateItem}
-              >
-                <img src={`${import.meta.env.BASE_URL}lactigo.avif`} alt="LactiGo" className={styles.affiliateLogo} />
-              </a>
-            </div>
+            <a
+              href="https://my.lactigo.com/alle"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.affiliateItem}
+            >
+              <img src={`${import.meta.env.BASE_URL}lactigo.avif`} alt="LactiGo" className={styles.affiliateLogo} />
+              <p className={styles.affiliateDesc}>Topical athletic recovery gel that reduces muscle soreness and fatigue — applied directly before and after activity.</p>
+              <span className={styles.affiliateBadge}>Affiliate</span>
+            </a>
             <div className={styles.affiliateDivider} />
-            <div className={styles.affiliateItem}>
-              <a
-                href="https://epihydrate.com/pages/mysta-golf-performance"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.affiliateItem}
-              >
-                <img src={`${import.meta.env.BASE_URL}mystagolf.webp`} alt="Mysta Golf" className={`${styles.affiliateLogo} ${styles.affiliateLogoLg}`} />
-              </a>
-            </div>
+            <a
+              href="https://epihydrate.com/pages/mysta-golf-performance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.affiliateItem}
+            >
+              <img src={`${import.meta.env.BASE_URL}mystagolf.webp`} alt="Mysta Golf" className={`${styles.affiliateLogo} ${styles.affiliateLogoLg}`} />
+              <p className={styles.affiliateDesc}>Premium hydration and endurance formula engineered specifically for the demands of 18 holes on the course.</p>
+              <span className={styles.affiliateBadge}>Affiliate</span>
+            </a>
           </div>
         </div>
       </section>

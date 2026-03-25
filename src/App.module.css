@@ -295,40 +295,97 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: stretch;
 }
 
-.aboutImageWrap {
-  position: relative;
-}
-
-.aboutImg {
-  width: 100%;
-  height: 540px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.15);
-}
-
-.aboutBadge {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  background: var(--gold);
-  color: var(--green-900);
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
+.aboutCertsCol {
+  background: var(--green-900);
+  border-radius: 12px;
+  padding: 48px 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 1.3;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(201,168,76,0.4);
 }
+
+.aboutCertsCol .certSectionLabel {
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+
+.certCardList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.certCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.certCard:last-child {
+  border-bottom: none;
+}
+
+.certCardDot {
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.certCardTitle {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.certCardSub {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+
+.eduSection {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.eduSection .certSectionLabel {
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.eduCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.eduYear {
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+
+.aboutText {
+  background: var(--green-50);
+  border: 1px solid var(--green-100);
+  border-radius: 12px;
+  padding: 48px 40px;
+}
+
 
 .avatar {
   width: 120px;
@@ -364,29 +421,13 @@
   margin-bottom: 16px;
 }
 
-.certList {
-  list-style: none;
-  margin-top: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.certItem {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--green-800);
-}
-
-.certDot {
-  width: 8px;
-  height: 8px;
-  background: var(--gold);
-  border-radius: 50%;
-  flex-shrink: 0;
+.certSectionLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green-500);
+  margin-bottom: 14px;
 }
 
 /* ── SERVICES ── */
@@ -599,7 +640,13 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--green-500);
-  margin-bottom: 32px;
+  margin-bottom: 8px;
+}
+
+.affiliateSub {
+  font-size: 14px;
+  color: var(--gray-500);
+  margin-bottom: 36px;
 }
 
 .affiliateGrid {
@@ -610,7 +657,24 @@
 }
 
 .affiliateItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  text-decoration: none;
+  background: var(--white);
+  border: 1px solid var(--green-100);
+  border-radius: 14px;
+  padding: 28px 32px;
+  width: 240px;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+a.affiliateItem:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+  border-color: var(--green-300);
 }
 
 .affiliateDivider {
@@ -624,7 +688,7 @@
   height: 40px;
   width: auto;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   transition: opacity 0.2s;
 }
 
@@ -633,13 +697,26 @@
 }
 
 a.affiliateItem:hover .affiliateLogo {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .affiliateDesc {
-  font-size: 14px;
-  color: var(--gray-600);
+  font-size: 13px;
+  color: var(--gray-500);
   line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.affiliateBadge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-600);
+  background: var(--green-50);
+  border: 1px solid var(--green-200);
+  border-radius: 99px;
+  padding: 2px 10px;
 }
 
 @media (max-width: 480px) {
