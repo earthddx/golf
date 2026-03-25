@@ -386,7 +386,7 @@ export default function App() {
                 <Mail size={22} className={styles.contactIcon} />
                 <div>
                   <h4>Email</h4>
-                  <p>hello@allegolflab.com</p>
+                  <p>allemiller@allegolflab.com</p>
                 </div>
               </div>
               <div className={styles.contactQuote}>
