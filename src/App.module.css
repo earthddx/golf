@@ -293,15 +293,15 @@
 
 .aboutGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 3fr 2fr;
+  gap: 60px;
   align-items: stretch;
 }
 
 .aboutCertsCol {
   background: var(--green-900);
   border-radius: 12px;
-  padding: 48px 40px;
+  padding: 40px 36px;
   display: flex;
   flex-direction: column;
 }
@@ -313,8 +313,8 @@
 
 .certCardList {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0;
   flex: 1;
 }
@@ -322,12 +322,13 @@
 .certCard {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding: 18px 0;
+  gap: 12px;
+  padding: 14px 12px 14px 0;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.certCard:last-child {
+.certCard:last-child,
+.certCard:nth-last-child(2):nth-child(odd) {
   border-bottom: none;
 }
 
@@ -1044,6 +1045,10 @@ a.affiliateItem:hover .affiliateLogo {
   .aboutGrid {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .certCardList {
+    grid-template-columns: 1fr;
   }
 
   .aboutImg {
