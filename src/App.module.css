@@ -187,6 +187,12 @@
   flex-wrap: wrap;
 }
 
+.heroCtas .btnPrimary,
+.heroCtas .btnGhost {
+  flex: 1;
+  text-align: center;
+}
+
 .btnPrimary {
   display: inline-block;
   background: var(--gold);
@@ -750,6 +756,136 @@ a.affiliateItem:hover .affiliateLogo {
   }
 }
 
+/* ── SERVICE AFFILIATIONS ── */
+.medPartners {
+  background: var(--green-900);
+  padding: 100px 0;
+}
+
+.medPartners .sectionTitle {
+  color: var(--white);
+}
+
+.medPartnerCard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 16px;
+  padding: 48px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.medPartnerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.medPartnerInfo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.medPartnerPhoto {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.medPartnerEyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.medPartnerName {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.medPartnerPractice {
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+}
+
+.medPartnerLink {
+  display: inline-block;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.medPartnerLink:hover {
+  background: var(--gold);
+  color: var(--green-900);
+}
+
+.medPartnerBio {
+  font-size: 15px;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.medServicesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.medServiceTag {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 99px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.82);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.medServiceTag:hover {
+  background: rgba(201,168,76,0.12);
+  border-color: rgba(201,168,76,0.4);
+  color: var(--gold-light);
+}
+
+@media (max-width: 768px) {
+  .medPartnerCard {
+    padding: 32px 24px;
+  }
+
+  .medPartnerHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
 /* ── CONTACT ── */
 .contact {
   padding: 100px 0;
@@ -810,6 +946,30 @@ a.affiliateItem:hover .affiliateLogo {
 .textarea {
   resize: vertical;
   min-height: 120px;
+}
+
+.formDivider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0;
+}
+
+.formDivider::before,
+.formDivider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--gray-200);
+}
+
+.formDivider span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  white-space: nowrap;
 }
 
 .formSuccess {
@@ -1042,6 +1202,10 @@ a.affiliateItem:hover .affiliateLogo {
     padding: 0 24px;
   }
 
+  .heroCtas {
+    flex-direction: column;
+  }
+
   .aboutGrid {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -1071,6 +1235,14 @@ a.affiliateItem:hover .affiliateLogo {
   .statItem {
     flex: 0 0 50%;
     border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .avatar {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .contactGrid {

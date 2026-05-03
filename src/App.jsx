@@ -76,11 +76,15 @@ const SERVICES = [
 
 const CERTIFICATIONS = [
   {
-    title: "MyTPI Golf Fitness",
+    title: "Uniararas University",
+    sub: "Bachelor's Degree ·  Physical Education / Exercise Physiology · 2000 – 2004",
+  },
+  {
+    title: "MyTPI Golf Fitness / Medical",
     sub: "Titleist Performance Institute",
   },
   {
-    title: "K-Vest 3D Biomechanics",
+    title: "K-Vest 3D Motion (Kinematic Sequence)",
     sub: "Kinematic Sequence Analysis",
   },
   { title: "ELDOA", sub: "Spinal Decompression Method" },
@@ -90,20 +94,12 @@ const CERTIFICATIONS = [
     sub: "Sports Medicine Functional Assessment · Diagnostic system identifying root causes of musculoskeletal pain in golfers",
   },
   {
-    title: "Dr. Kwon's Golf Biomechanics",
-    sub: "Level 1 & 2 · Instructor Training Program",
+    title: "Golf Biomechanics",
+    sub: "Level 1 & 2 (Dr. Kwon)",
   },
   {
     title: "Sport Psychology",
     sub: "Mental Performance & Athletic Mindset",
-  },
-  {
-    title: "Adaptive Motor Activities",
-    sub: "Inclusive Fitness & Adaptive Movement Programming",
-  },
-  {
-    title: "Physical Activity for Older Adults",
-    sub: "Senior Fitness & Longevity Training",
   },
   {
     title: "Personal Trainer",
@@ -112,10 +108,6 @@ const CERTIFICATIONS = [
   {
     title: "Aquatic Sports Science",
     sub: "PUC University · Hydro Science, Business & Practical Plus",
-  },
-  {
-    title: "Exercise & Mind-Body Training",
-    sub: "PUC University · Workout Fitness & Mental Performance",
   },
   {
     title: "Kids Swimming Coach",
@@ -222,7 +214,7 @@ export default function App() {
         <div className={styles.heroOverlay} />
         <img
           className={styles.heroBg}
-          src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1800&q=80"
+          src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1800&q=80"
           alt="Golf course at sunrise"
         />
         <div className={styles.heroContent}>
@@ -275,7 +267,7 @@ export default function App() {
           <div className={styles.aboutGrid}>
             <div className={styles.aboutCertsCol}>
               <p className={styles.certSectionLabel}>
-                Certifications &amp; Training
+                Education &amp; Certifications
               </p>
               <ul className={styles.certCardList}>
                 {CERTIFICATIONS.map((c) => (
@@ -288,23 +280,6 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-
-              <div className={styles.eduSection}>
-                <p className={styles.certSectionLabel}>Education</p>
-                <div className={styles.eduCard}>
-                  <span className={styles.certCardDot} />
-                  <div>
-                    <span className={styles.certCardTitle}>
-                      Uniararas University
-                    </span>
-                    <span className={styles.certCardSub}>
-                      Bachelor's Degree · Health &amp; Physical Education /
-                      Exercise Physiology
-                    </span>
-                    <span className={styles.eduYear}>2000 – 2004</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div className={styles.aboutText}>
@@ -462,24 +437,78 @@ export default function App() {
               </p>
               <span className={styles.affiliateBadge}>Affiliate</span>
             </a>
-            <div className={styles.affiliateDivider} />
-            <a
-              href="https://epihydrate.com/pages/mysta-golf-performance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.affiliateItem}
-            >
-              <img
-                src={`${import.meta.env.BASE_URL}mystagolf.webp`}
-                alt="Mysta Golf"
-                className={`${styles.affiliateLogo} ${styles.affiliateLogoLg}`}
-              />
-              <p className={styles.affiliateDesc}>
-                Premium hydration and endurance formula engineered specifically
-                for the demands of 18 holes on the course.
-              </p>
-              <span className={styles.affiliateBadge}>Affiliate</span>
-            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICE AFFILIATIONS ── */}
+      <section className={styles.medPartners}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <p className={styles.sectionEyebrow}>Service Affiliations</p>
+            <h2 className={styles.sectionTitle} style={{ color: "var(--white)" }}>
+              Trusted Medical Partners
+            </h2>
+            <p className={styles.sectionDesc} style={{ color: "rgba(255,255,255,0.65)" }}>
+              Alessandra partners with leading medical specialists to offer her
+              clients a complete path to health, recovery, and performance.
+            </p>
+          </div>
+
+          <div className={styles.medPartnerCard}>
+            <div className={styles.medPartnerHeader}>
+              <div className={styles.medPartnerInfo}>
+                <img
+                  src="https://www.restonobgyn.com/wp-content/uploads/2025/08/dr-iskander-pro-image.jpg"
+                  alt="Dr. George Iskander"
+                  className={styles.medPartnerPhoto}
+                />
+                <div>
+                  <p className={styles.medPartnerEyebrow}>Medical Affiliation</p>
+                  <h3 className={styles.medPartnerName}>Dr. George Iskander</h3>
+                  <p className={styles.medPartnerPractice}>Reston OB/GYN &amp; Wellness</p>
+                </div>
+              </div>
+              <a
+                href="https://www.restonobgyn.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.medPartnerLink}
+              >
+                Visit Practice
+              </a>
+            </div>
+
+            <p className={styles.medPartnerBio}>
+              Dr. Iskander is a board-certified OB/GYN specializing in minimally
+              invasive and robotic-assisted surgery, with a focus on uterine
+              fibroids, abnormal uterine bleeding, and hysterectomy. He trained
+              at SUNY Downstate and the Icahn School of Medicine at Mount Sinai,
+              and brings culturally sensitive, patient-centered care to the
+              Northern Virginia community — fluent in both English and Arabic.
+              Beyond his practice, he is actively involved in international
+              medical missions serving underserved communities worldwide.
+            </p>
+
+            <div className={styles.medServicesGrid}>
+              {[
+                "Weight Loss (GLP-1)",
+                "Biote Hormone Replacement",
+                "MonaLisa Laser Treatment",
+                "Pelvic Floor Therapy",
+                "IV Therapy",
+                "CO₂ Laser",
+                "PDO Threads",
+                "Facials",
+                "HydroFacial",
+                "Botox",
+                "Fillers",
+              ].map((svc) => (
+                <span key={svc} className={styles.medServiceTag}>
+                  {svc}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -531,13 +560,36 @@ export default function App() {
                 />
               </div>
               <div className={styles.formGroup}>
-                <label className={styles.label}>Interested In</label>
+                <label className={styles.label}>Golf Services — Interested In</label>
                 <select className={styles.input} name="interest">
+                  <option value="">Select a service…</option>
                   <option>Golf Biomechanics Assessment</option>
                   <option>TPI Golf Fitness Program</option>
                   <option>K-Vest 3D Analysis</option>
                   <option>ELDOA &amp; Corrective Exercise</option>
                   <option>Full Performance Program</option>
+                </select>
+              </div>
+
+              <div className={styles.formDivider}>
+                <span>Also interested in Dr. Iskander's services?</span>
+              </div>
+
+              <div className={styles.formGroup}>
+                <label className={styles.label}>Medical Services — Interested In</label>
+                <select className={styles.input} name="medicalInterest">
+                  <option value="">Select a service (optional)…</option>
+                  <option>Weight Loss — GLP-1</option>
+                  <option>Biote Hormone Replacement</option>
+                  <option>MonaLisa Laser Treatment</option>
+                  <option>Pelvic Floor Therapy</option>
+                  <option>IV Therapy</option>
+                  <option>CO₂ Laser</option>
+                  <option>PDO Threads</option>
+                  <option>Facials</option>
+                  <option>HydroFacial</option>
+                  <option>Botox</option>
+                  <option>Fillers</option>
                 </select>
               </div>
               <div className={styles.formGroup}>

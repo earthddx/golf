@@ -3,7 +3,9 @@
     "allow": [
       "Bash(find d:/Projects/golf/node_modules/lucide-react -name *.js)",
       "Bash(find /d/Projects/golf -maxdepth 2 -type f -name *.config.* -o -name *.json -o -name .env*)",
-      "Bash(grep -v \"^$\")"
+      "Bash(grep -v \"^$\")",
+      "WebFetch(domain:www.restonobgyn.com)",
+      "WebFetch(domain:unsplash.com)"
     ]
   }
 }
