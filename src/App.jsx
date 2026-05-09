@@ -91,7 +91,7 @@ const CERTIFICATIONS = [
   { title: "CES-NASM", sub: "Corrective Exercise Specialist" },
   {
     title: "SMFA — Golf Injuries",
-    sub: "Sports Medicine Functional Assessment · Diagnostic system identifying root causes of musculoskeletal pain in golfers",
+    sub: "Selective Functional Movement Assessment · Diagnostic system identifying root causes of musculoskeletal pain in golfers",
   },
   {
     title: "Golf Biomechanics",

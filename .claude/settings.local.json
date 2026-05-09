@@ -5,7 +5,11 @@
       "Bash(find /d/Projects/golf -maxdepth 2 -type f -name *.config.* -o -name *.json -o -name .env*)",
       "Bash(grep -v \"^$\")",
       "WebFetch(domain:www.restonobgyn.com)",
-      "WebFetch(domain:unsplash.com)"
+      "WebFetch(domain:unsplash.com)",
+      "Read(//d/Projects/golf-next/**)"
+    ],
+    "additionalDirectories": [
+      "d:\\Projects\\golf-next\\app"
     ]
   }
 }
